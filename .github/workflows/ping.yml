@@ -9,5 +9,8 @@ jobs:
   ping:
     runs-on: ubuntu-latest
     steps:
+      - name: Log timestamp
+        run: echo "🔔 Pinging site at $(date -u)"
+
       - name: Curl the site
         run: curl -s https://apphub.danfoss.com/app/hose-end-fitting > /dev/null
