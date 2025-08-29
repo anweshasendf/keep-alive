@@ -2,7 +2,7 @@ name: Keep Azure Container Alive
 
 on:
   schedule:
-    - cron: "*/10 * * * *"   # every 10 minutes (UTC time)
+    - cron: "*/5 * * * *"   # every 5 minutes (UTC time)
   workflow_dispatch:          # optional: allows manual run from GitHub UI
 
 jobs:
