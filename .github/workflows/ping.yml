@@ -1,0 +1,13 @@
+name: Keep Azure Container Alive
+
+on:
+  schedule:
+    - cron: "*/10 * * * *"   # every 10 minutes (UTC time)
+  workflow_dispatch:          # optional: allows manual run from GitHub UI
+
+jobs:
+  ping:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Curl the site
+        run: curl -s https://hose-end-fitting-app.purplesand-4347c4f2.westeurope.azurecontainerapps.io/ > /dev/null
